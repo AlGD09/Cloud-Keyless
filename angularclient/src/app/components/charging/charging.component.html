@@ -1,0 +1,67 @@
+<div class="charging-container">
+  <mat-card class="main-card" appearance="raised">
+
+    <div class="main-card-content-wrapper">
+      <mat-card-header>
+        <!-- Dropdown for selecting a rented wallbox -->
+        <mat-form-field appearance="fill" class="selector">
+          <mat-label i18n>Select chargepoint</mat-label>
+          <mat-select [(ngModel)]="selectedWallbox" (selectionChange)="onWallboxChange()">
+            <mat-option *ngFor="let wallbox of wallboxes" [value]="wallbox">
+              {{ wallbox.owner.name }} - {{ wallbox.name }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </mat-card-header>
+
+      <!-- Show fallback if no upcoming booking -->
+      <mat-card-content *ngIf="!isBeforeUpcomingBookingEndTime()">
+        <h1 i18n>You have no upcoming booking</h1>
+      </mat-card-content>
+
+      <!-- If there's an upcoming booking -->
+      <mat-card-content *ngIf="isBeforeUpcomingBookingEndTime()">
+        <h2 i18n>Your booking is active between:</h2>
+
+        <app-time-range
+          [start]="upcomingBooking?.startTime"
+          [end]="upcomingBookingEndPlusOneMinute"
+        ></app-time-range>
+      </mat-card-content>
+    </div>
+
+    <mat-card-footer class="inner-card-wrapper" *ngIf="isBeforeUpcomingBookingEndTime()">
+      <mat-card class="inner-card" appearance="raised">
+        <mat-card-header>
+          <div class="button-header-wrapper">
+              <button
+                class="turn-on-button"
+                mat-raised-button
+                (click)="handleTurnOnClick()"
+                [disabled]="isCharging || !isAfterBookingStart"
+                tabindex="-1"
+              >
+                <strong>{{ powerButtonText }}</strong>
+              </button>
+
+            <button
+              class="start-charging-button"
+              mat-raised-button
+              (click)="toggleCharging()"
+              [disabled]="!isTurnedOn"
+              tabindex="-1"
+            >
+              <strong>
+                {{ chargingButtonText }}
+              </strong>
+            </button>
+          </div>
+        </mat-card-header>
+
+        <mat-card-content class="inner-card-content">
+          <app-spinner-with-text [state]="spinnerState"></app-spinner-with-text>
+        </mat-card-content>
+      </mat-card>
+    </mat-card-footer>
+  </mat-card>
+</div>

@@ -1,0 +1,101 @@
+<div class="booking-container">
+  <mat-card class="left-side" appearance="raised">
+    <mat-card-content class="menu-group">
+      <!-- <div class="datetime-row">
+        <mat-form-field appearance="fill" class="datetime-field">
+          <mat-label>Meeting date</mat-label>
+          <input matInput [matDatepicker]="datepicker" [(ngModel)]="value" />
+          <mat-datepicker #datepicker></mat-datepicker>
+          <mat-datepicker-toggle
+            [for]="datepicker"
+            matSuffix
+          ></mat-datepicker-toggle>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="datetime-field">
+          <mat-label>Meeting time</mat-label>
+          <input
+            matInput
+            [matTimepicker]="timepicker"
+            [(ngModel)]="value"
+            [ngModelOptions]="{ updateOn: 'blur' }"
+          />
+          <mat-timepicker #timepicker />
+          <mat-timepicker-toggle [for]="timepicker" matSuffix />
+        </mat-form-field>
+      </div>
+
+      <p>Value: {{ value }}</p> -->
+
+      <mat-form-field>
+        <mat-label i18n>Select chargepoint</mat-label>
+        <mat-select
+          [(ngModel)]="selectedWallbox"
+          (selectionChange)="onWallboxChange($event.value.id)"
+        >
+          @for (wallbox of wallboxes; track wallbox.id) {
+          <mat-option [value]="wallbox">
+            {{ wallbox.owner.name + " - " + wallbox.name }}
+          </mat-option>
+          }
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label i18n>Select date</mat-label>
+        <input
+          matInput
+          [matDatepicker]="picker"
+          [(ngModel)]="selectedDate"
+          (dateChange)="onDateChange($event)"
+          name="selectedDate"
+        />
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+    </mat-card-content>
+
+    <mat-card-footer>
+      @if (selectedSlots.size !== 0) {
+      <mat-card appearance="raised">
+        <mat-card-header i18n> Selected booking time: </mat-card-header>
+
+        <mat-card-content>
+          <app-time-range
+            [start]="getSelectedSlotRange()?.start"
+            [end]="getSelectedSlotRange()?.end"
+          ></app-time-range>
+        </mat-card-content>
+      </mat-card>
+      }
+      <button
+        i18n
+        mat-raised-button
+        (click)="confirmBooking()"
+        [disabled]="selectedSlots.size === 0"
+      >
+        Confirm booking
+      </button>
+    </mat-card-footer>
+  </mat-card>
+
+  <div
+    class="time-grid"
+    [style.gridTemplateColumns]="'repeat(' + columns + ', 1fr)'"
+  >
+    <mat-chip
+      *ngFor="let slot of timeSlots"
+      [ngClass]="{
+        booked: slot.bookingUser,
+        selected: isSelected(slot)
+      }"
+      [style.gridColumn]="getGridColumn(slot)"
+      (click)="toggleSlot(slot)"
+      [disabled]="slot.bookingUser"
+      selectable="false"
+      class="slot-chip"
+    >
+      {{ slot.startTime | date : "HH:mm" }}
+    </mat-chip>
+  </div>
+</div>

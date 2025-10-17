@@ -1,0 +1,25 @@
+<mat-toolbar>
+  <button mat-flat-button [routerLink]="'/book'" routerLinkActive="active" tabindex="-1">
+    <mat-icon class="icon-display">date_range</mat-icon>
+    <span i18n class="button-label">Book</span>
+  </button>
+
+  <button mat-flat-button [routerLink]="'/charge'" routerLinkActive="active" tabindex="-1">
+    <mat-icon class="icon-display">offline_bolt</mat-icon>
+    <span i18n class="button-label">Charge</span>
+  </button>
+
+  <button mat-flat-button [routerLink]="'/transactions'" routerLinkActive="active" tabindex="-1">
+    <mat-icon class="icon-display">receipt</mat-icon>
+    <span i18n class="button-label">Transactions</span>
+  </button>
+
+  <span class="spacer"></span>
+
+  <img src="ELEKEY-Logo-small.svg" alt="Small Elekey Icon"/>
+</mat-toolbar>
+
+
+
+<!-- Where routed content will be displayed -->
+<router-outlet></router-outlet>

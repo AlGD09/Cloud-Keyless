@@ -1,0 +1,52 @@
+@use '@angular/material' as mat;
+
+$toolbar-color: --mat-sys-surface-container-lowest;
+$on-toolbar-color: --mat-sys-on-surface-container-lowest;
+$on-button-color: --mat-sys-on-surface;
+$active-button-color: --mat-sys-surface-container;
+
+mat-toolbar {
+  @include mat.toolbar-overrides((
+    container-background-color: var($toolbar-color),
+    container-text-color: var($on-toolbar-color),
+  ));
+
+  @include mat.button-overrides((
+    filled-container-color: var($toolbar-color),
+    filled-label-text-color: var($on-button-color),
+    filled-hover-state-layer-opacity: 0.4,
+    filled-label-text-size: --mat-sys-headline-large,
+  ));
+}
+
+.icon-display {
+  transform: scale(1.4);
+}
+
+.button-label {
+  display: inline;
+
+  @media (max-width: 600px) {
+    display: none;
+  }
+}
+
+button.active {
+  @include mat.button-overrides((
+    filled-container-color: var($active-button-color),
+    filled-label-text-color: var($on-button-color),
+  ));
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+img {
+  height: 160px;
+  width: auto;
+
+    @media (max-width: 600px) {
+    height: 92px;
+  }
+}

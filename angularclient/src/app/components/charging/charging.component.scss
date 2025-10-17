@@ -1,0 +1,107 @@
+@use '@angular/material' as mat;
+
+$elekey-green: #50bb00;
+$charging-blue: var(--mat-sys-secondary);
+$disabled-button-color: #999;
+$black: #222222;
+
+.charging-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 16px;
+  width: 100%;
+}
+
+.main-card {
+  width: 600px;
+  height: calc(100vh - 32px - 64px); // padding + toolbar
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+
+  @include mat.card-overrides((
+    elevated-container-color: var(--mat-sys-surface-container-lowest),
+  ));
+}
+
+.main-card-content-wrapper {
+  flex-grow: 1;
+  padding: 0 16px;
+}
+
+mat-card-header,
+mat-card-content {
+  text-align: center;
+  display: block;
+}
+
+.button-header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 32px;
+  width: 100%;
+}
+
+.inner-card-wrapper {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 100%;
+  margin: 32px 0 32px;
+}
+
+/* New class for the inner card container inside footer */
+.inner-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.inner-card-content {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;  // center horizontally
+  align-items: flex-end;    // bottom align vertically
+}
+
+mat-card mat-card {
+  width: 100%;
+  max-width: 400px;
+  height: 100%;
+
+  @include mat.card-overrides((
+    elevated-container-color: $black,
+    outlined-container-color: $black,
+    outlined-outline-color: $black,
+  ));
+}
+
+app-time-range {
+  font-size: 1.5em;
+}
+
+button {
+  width: 151px;
+
+  &:disabled {
+    background-color: $disabled-button-color !important;
+    color: white !important;
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}
+
+.turn-on-button {
+  @include mat.button-overrides((
+    protected-container-color: $elekey-green,
+    protected-label-text-color: white,
+  ));
+}
+
+.start-charging-button {
+  @include mat.button-overrides((
+    protected-container-color: $charging-blue,
+    protected-label-text-color: white,
+  ));
+}

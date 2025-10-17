@@ -1,0 +1,30 @@
+@use '@angular/material' as mat;
+
+$card-color: --mat-sys-surface-container-lowest;
+
+
+.invoice-card {
+  margin: 24px;
+
+  @include mat.card-overrides((
+    elevated-container-color: var($card-color),
+  ));
+}
+
+.no-bookings {
+  font-size: 24px;
+  text-align: center;
+  margin-top: 2rem;
+  font-weight: bold;
+}
+
+td {
+  cursor: pointer;
+}
+
+table {
+  @include mat.table-overrides((
+    background-color: var($card-color),
+  ));
+
+}

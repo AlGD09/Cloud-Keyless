@@ -1,0 +1,9 @@
+<div class="spinner-container" [ngClass]="additionalClass">
+  <mat-progress-spinner
+    [diameter]="200"
+    [strokeWidth]="12"
+    [mode]="isIndeterminate ? 'indeterminate' : 'determinate'"
+    [value]="isIndeterminate ? 0 : 100"
+  ></mat-progress-spinner>
+  <div class="spinner-text"><strong>{{ text }}</strong></div>
+</div>

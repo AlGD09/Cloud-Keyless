@@ -1,0 +1,15 @@
+<div *ngIf="start && end" class="range-columns">
+  <div class="range-column">
+    <strong>{{ start | date : 'HH:mm' }}</strong><br />
+    <small>{{ start | date : 'shortDate' }}</small>
+  </div>
+
+  <div class="range-column separator">
+    <strong>&#8722;</strong>
+  </div>
+
+  <div class="range-column">
+    <strong>{{ end | date : 'HH:mm' }}</strong><br />
+    <small>{{ end | date : 'shortDate' }}</small>
+  </div>
+</div>

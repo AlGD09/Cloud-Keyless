@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="4335548177977692221" datatype="html">
+        <source>Buchungsvorgang</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">4,5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7541005936062780573" datatype="html">
+        <source>Ladevorgang</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">9,10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2611475427610660053" datatype="html">
+        <source>Transaktionen</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">14,15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3074281183897074672" datatype="html">
+        <source>Ladesäule auswählen</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/booking/booking.component.html</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/charging/charging.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2671643902824593326" datatype="html">
+        <source>Datum auswählen</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/booking/booking.component.html</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6704440113179913443" datatype="html">
+        <source> Ausgewählte Buchungszeit: </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/booking/booking.component.html</context>
+          <context context-type="linenumber">61</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9109312732017584276" datatype="html">
+        <source> Buchung bestätigen </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/booking/booking.component.html</context>
+          <context context-type="linenumber">77,78</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7841100507564343168" datatype="html">
+        <source>Buchung erfolgreich registriert!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/booking/booking.component.ts</context>
+          <context context-type="linenumber">188</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7819314041543176992" datatype="html">
+        <source>Schließen</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/booking/booking.component.ts</context>
+          <context context-type="linenumber">188</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/booking/booking.component.ts</context>
+          <context context-type="linenumber">197</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/transactions-dialog/transactions-dialog.component.html</context>
+          <context context-type="linenumber">76,77</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2820251551942344585" datatype="html">
+        <source>Buchung fehlgeschlagen. Bitte erneut versuchen.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/booking/booking.component.ts</context>
+          <context context-type="linenumber">197</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5686709242018795365" datatype="html">
+        <source>Sie haben keine bevorstehenden Buchungen</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/charging/charging.component.html</context>
+          <context context-type="linenumber">19,20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2276277821060700734" datatype="html">
+        <source>Ihre Buchung ist aktiv zwischen:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/charging/charging.component.html</context>
+          <context context-type="linenumber">24,26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3995466360862651112" datatype="html">
+        <source>Ladesäule ausschalten</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/charging/charging.component.ts</context>
+          <context context-type="linenumber">139</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1949278650641110561" datatype="html">
+        <source>Ladesäule einschalten</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/charging/charging.component.ts</context>
+          <context context-type="linenumber">139</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4402114957676523544" datatype="html">
+        <source>Ladevorgang stoppen</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/charging/charging.component.ts</context>
+          <context context-type="linenumber">143</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4682284932320707417" datatype="html">
+        <source>Ladevorgang starten</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/charging/charging.component.ts</context>
+          <context context-type="linenumber">143</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="471268601845418594" datatype="html">
+        <source>Ladesäule wartet</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/spinner-with-text/spinner-with-text.component.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7160029661601775341" datatype="html">
+        <source>Bereit!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/spinner-with-text/spinner-with-text.component.ts</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1489733291680010739" datatype="html">
+        <source>Ladevorgang läuft</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/spinner-with-text/spinner-with-text.component.ts</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7549898994440271689" datatype="html">
+        <source>Transaktionen zur Buchung</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/transactions-dialog/transactions-dialog.component.html</context>
+          <context context-type="linenumber">2,3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5487630018331375668" datatype="html">
+        <source>Von:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/transactions-dialog/transactions-dialog.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5752829569732845992" datatype="html">
+        <source>Bis:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/transactions-dialog/transactions-dialog.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8608309707667250598" datatype="html">
+        <source>Gebuchte Zeitfenster</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/transactions-dialog/transactions-dialog.component.html</context>
+          <context context-type="linenumber">12,13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5162686434580248853" datatype="html">
+        <source>Start</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/transactions-dialog/transactions-dialog.component.html</context>
+          <context context-type="linenumber">15,16</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/transactions-dialog/transactions-dialog.component.html</context>
+          <context context-type="linenumber">51,52</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1241348629231510663" datatype="html">
+        <source>Ende</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/transactions-dialog/transactions-dialog.component.html</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/transactions-dialog/transactions-dialog.component.html</context>
+          <context context-type="linenumber">59</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3168960388974628690" datatype="html">
+        <source>Gebucht am</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/transactions-dialog/transactions-dialog.component.html</context>
+          <context context-type="linenumber">29,30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4838560589606228091" datatype="html">
+        <source>Pings</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/transactions-dialog/transactions-dialog.component.html</context>
+          <context context-type="linenumber">36,37</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1429526363208955673" datatype="html">
+        <source>Gesamtanzahl Pings:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/transactions-dialog/transactions-dialog.component.html</context>
+          <context context-type="linenumber">43</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3943584682889369440" datatype="html">
+        <source>Ladevorgänge</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/transactions-dialog/transactions-dialog.component.html</context>
+          <context context-type="linenumber">47,49</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6790433693554101771" datatype="html">
+        <source>Verbrauchte Wh</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/transactions-dialog/transactions-dialog.component.html</context>
+          <context context-type="linenumber">65,66</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5779127063151688401" datatype="html">
+        <source>Gesamtverbrauch (Wh):</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/transactions-dialog/transactions-dialog.component.html</context>
+          <context context-type="linenumber">72</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3894950702316166331" datatype="html">
+        <source>Laden...</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/transactions/transactions.component.html</context>
+          <context context-type="linenumber">4,6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5901512581805666152" datatype="html">
+        <source>Sie haben noch keine abgeschlossenen Buchungen!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/transactions/transactions.component.html</context>
+          <context context-type="linenumber">7,8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6437687270040375788" datatype="html">
+        <source>Ladesäule</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/transactions/transactions.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5203279511751768967" datatype="html">
+        <source>Von</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/transactions/transactions.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1640609344969975994" datatype="html">
+        <source>Bis</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/transactions/transactions.component.html</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

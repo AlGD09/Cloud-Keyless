@@ -1,0 +1,148 @@
+@use '@angular/material' as mat;
+
+$selected-slot-color: --mat-sys-secondary-container;
+$confirm-button-color: --mat-sys-secondary;
+$on-confirm-button-color: --mat-sys-on-secondary;
+$elekey-green: #50bb00;
+$time-slot-margin: 5px;
+
+.booking-container {
+  display: flex;
+  height: calc(100vh - 64px);
+  gap: 20px;
+  overflow: hidden; /* Prevent scroll bleed */
+}
+
+
+.left-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;      /* horizontal centering */
+  gap: 10px;
+  padding: 10px;
+  margin: 16px;
+  flex-shrink: 0; /* Prevent shrinking */
+  overflow: hidden; /* Prevent scrolling */
+
+    @include mat.card-overrides((
+    elevated-container-color: var(--mat-sys-surface-container-lowest),
+  ));
+}
+
+.menu-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.datetime-row {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  justify-content: center;
+}
+
+.datetime-field {
+  flex: 1;
+}
+
+mat-card mat-card {
+
+  color: var(--mat-sys-on-secondary-container);
+
+
+  @include mat.card-overrides((
+    elevated-container-color: var($selected-slot-color),
+  ));
+
+}
+
+mat-card-footer {
+  text-align: center;   // 👈 Center text content inside the block
+}
+
+mat-card button {
+
+  margin-top: 16px;
+  @include mat.button-overrides((
+    protected-container-color: var($confirm-button-color),
+    protected-label-text-color: var($on-confirm-button-color),
+  ));
+}
+
+
+.range-columns {
+  display: flex;
+  gap: 10px;
+  margin-top: 5px;
+  justify-content: center;
+}
+
+.range-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.time-grid {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 10px;
+  display: grid;
+  gap: 6px;
+  grid-auto-rows: min-content;
+  align-items: start;
+}
+
+mat-chip {
+  height: 46px;
+  margin-top: $time-slot-margin;
+  margin-bottom: $time-slot-margin;
+  margin-right: $time-slot-margin;
+  cursor: pointer;
+
+  @include mat.chips-overrides((
+    outline-color: black,
+    label-text-color: black,
+    label-text-size: 1rem,
+  ));
+}
+
+.booked {
+  background-color: $elekey-green !important;
+
+  @include mat.chips-overrides((
+    disabled-outline-color: $elekey-green ,
+    disabled-label-text-color: white,
+  ));
+
+}
+
+.selected {
+  background-color: var($selected-slot-color) !important;
+
+  @include mat.chips-overrides((
+    outline-color: var($selected-slot-color),
+    label-text-color: var($confirm-button-color),
+  ));
+}
+
+::ng-deep .snackbar-success {
+
+    @include mat.snack-bar-overrides((
+    container-color: $elekey-green,
+    supporting-text-color: white,
+    button-color: white,
+  ));
+}
+
+::ng-deep .snackbar-error {
+
+  @include mat.snack-bar-overrides((
+    container-color: red,
+    supporting-text-color: black,
+    button-color: black,
+  ));
+}
+

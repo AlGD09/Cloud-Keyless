@@ -1,0 +1,34 @@
+<mat-card class="invoice-card" appearance="raised" >
+  <mat-card-content>
+
+    <div *ngIf="isLoading" i18n>Loading...</div>
+
+    <div *ngIf="!isLoading && invoices.length === 0" class="no-bookings">
+      <h1 i18n>You have no finished bookings yet!</h1>
+    </div>
+
+    <table *ngIf="invoices.length > 0" mat-table [dataSource]="invoices" class="invoice-table">
+      <!-- Wallbox Column -->
+      <ng-container matColumnDef="wallbox">
+        <th mat-header-cell *matHeaderCellDef> <strong i18n>Chargepoint</strong> </th>
+        <td mat-cell *matCellDef="let element"> {{element.wallboxOwner}} - {{element.wallboxName}} </td>
+      </ng-container>
+
+      <!-- From Column -->
+      <ng-container matColumnDef="from">
+        <th mat-header-cell *matHeaderCellDef> <strong i18n>From</strong> </th>
+        <td mat-cell *matCellDef="let element"> {{element.startTime | date:'short'}} </td>
+      </ng-container>
+
+      <!-- To Column -->
+      <ng-container matColumnDef="to">
+        <th mat-header-cell *matHeaderCellDef> <strong i18n>To</strong> </th>
+        <td mat-cell *matCellDef="let element"> {{ addOneMinute(element.endTime) | date:'short' }} </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="['wallbox', 'from', 'to']"></tr>
+      <tr mat-row *matRowDef="let row; columns: ['wallbox', 'from', 'to']" (click)="openDialog(row)"></tr>
+    </table>
+
+  </mat-card-content>
+</mat-card>

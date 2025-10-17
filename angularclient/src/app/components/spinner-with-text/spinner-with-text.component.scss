@@ -1,0 +1,58 @@
+$elekey-green: #50bb00;
+
+$blue: var(--mat-sys-secondary);
+$green: $elekey-green;
+$grey: dimgrey;
+
+.spinner-container {
+  position: relative;
+  display: inline-block;
+}
+
+.spinner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.1em;
+  font-weight: 500;
+  line-height: 1.2;
+  text-align: center;
+  pointer-events: none;
+  max-width: 140px;
+  color: white;
+}
+
+::ng-deep .grey-spinner mat-progress-spinner circle {
+  stroke: $grey !important;
+  animation: sleep 7s infinite;
+}
+
+::ng-deep .blue-spinner mat-progress-spinner circle {
+  stroke: $blue;
+}
+
+::ng-deep .pulsating-spinner mat-progress-spinner circle {
+  stroke: $green;
+  animation: pulsate 3s infinite;
+}
+
+@keyframes sleep {
+  0%, 100% {
+    stroke-width: 10;
+  }
+  50% {
+    stroke-width: 5;
+  }
+}
+
+@keyframes pulsate {
+  0%, 100% {
+    stroke: $green;
+    stroke-width: 10;
+  }
+  50% {
+    stroke: $blue;
+    stroke-width: 12;
+  }
+}

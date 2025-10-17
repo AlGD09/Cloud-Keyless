@@ -1,0 +1,12 @@
+@use '@angular/material' as mat;
+
+mat-divider {
+  margin-bottom: 16px;
+}
+
+button {
+    @include mat.button-overrides((
+    protected-container-color: var(--mat-sys-surface-container),
+    protected-label-text-color: var(--mat-sys-on-surface-container),
+  ));
+}
